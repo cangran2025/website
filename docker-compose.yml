@@ -1,0 +1,11 @@
+version: '1.0'
+
+services:
+  web:
+    image: nginx:alpine
+    container_name: light-tech-web
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/usr/share/nginx/html
+    restart: unless-stopped
